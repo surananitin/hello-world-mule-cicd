@@ -23,6 +23,7 @@
 				<filtering>true</filtering>
 			</testResource>
 		</testResources>
+
 		<plugins>
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
