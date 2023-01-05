@@ -4,7 +4,7 @@
   ],
   "redeploymentEnabled": true,
   "name": "hello-world",
-  "minMuleVersion": "4.1.1",
+  "minMuleVersion": "4.4.0",
   "requiredProduct": "MULE_EE",
   "classLoaderModelLoaderDescriptor": {
     "id": "mule",
