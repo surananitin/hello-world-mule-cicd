@@ -33,17 +33,17 @@
 				<configuration>
 					<classifier>mule-application</classifier>
 					<cloudHubDeployment>
-	        			<muleVersion>4.3.0</muleVersion>
-				        <username>${env.PLATFORM_USERNAME}</username>
-				        <password>${env.PLATFORM_PASSWORD}</password>
-				        <applicationName>hello-world-ns28540</applicationName>
-				        <environment>Sandbox</environment>
-				        <workers>1</workers>
-				        <workerType>MICRO</workerType>
-				        <objectStoreV2>true</objectStoreV2>
-				        <region>us-east-2</region>
-				        <businessGroupId>${env.BUS_GROUP_ID}</businessGroupId>
-      				</cloudHubDeployment>
+						<muleVersion>4.3.0</muleVersion>
+						<username>${env.PLATFORM_USERNAME}</username>
+						<password>${env.PLATFORM_PASSWORD}</password>
+						<applicationName>hello-world-ns28540</applicationName>
+						<environment>Sandbox</environment>
+						<workers>1</workers>
+						<workerType>MICRO</workerType>
+						<objectStoreV2>true</objectStoreV2>
+						<region>us-east-2</region>
+						<businessGroupId>${env.BUS_GROUP_ID}</businessGroupId>
+					</cloudHubDeployment>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -89,14 +89,14 @@
 		<dependency>
 			<groupId>com.mulesoft.munit</groupId>
 			<artifactId>munit-runner</artifactId>
-			<version>${munit.version}</version>
+			<version>2.3.13</version>
 			<classifier>mule-plugin</classifier>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.mulesoft.munit</groupId>
 			<artifactId>munit-tools</artifactId>
-			<version>${munit.version}</version>
+			<version>2.3.13</version>
 			<classifier>mule-plugin</classifier>
 			<scope>test</scope>
 		</dependency>
