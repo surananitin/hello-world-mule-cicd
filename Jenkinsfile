@@ -10,7 +10,7 @@ pipeline {
                 sh '''
                     echo "PATH = ${PATH}"
                     echo "M2_HOME = ${M2_HOME}"
-                    env.JAVA_HOME="${tool 'jdk8'}"
+                    export JAVA_HOME="${tool 'jdk8'}"
                     echo "JAVA_HOME= ${JAVA_HOME}"
                 '''
        }
