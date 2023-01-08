@@ -16,7 +16,10 @@ pipeline {
     }
     stage('Unit Test') {
       steps {
-        sh 'mvn clean test'
+      sh '''
+          echo "JAVA_HOME= ${JAVA_HOME}"
+          mvn clean test
+      '''
       }
     }
     stage('Deploy CloudHub') {
