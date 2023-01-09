@@ -23,6 +23,13 @@ pipeline {
                 '''
        }
     }
+
+    stage('Quality Check'){
+      steps{
+        withMaven(maven: 'maven', mavenSettingsConfig: 'c462e880-e0d1-4c31-bef5-1db5a8571773') {
+        mvn sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.sources=src/
+      }
+    }
     stage('Unit Test') {
       steps {
       withMaven(maven: 'maven', mavenSettingsConfig: 'c462e880-e0d1-4c31-bef5-1db5a8571773') {
@@ -33,14 +40,12 @@ pipeline {
         }
       }
     }
-    stage('Deploy CloudHub') {
+    stage('Deploy CloudHub Sandbox') {
       environment {
         ENVIRONMENT = "${env.cloudhub_env.toLowerCase()}"
       }
       steps {
-
-
-        echo "----Running Build ${env.BUILD_ID} on muleEnv - ${muleEnv}----- "
+        echo "----Running Build ${env.BUILD_ID} on muleEnv - ${ENVIRONMENT}----- "
         withMaven(maven: 'maven', mavenSettingsConfig: 'c462e880-e0d1-4c31-bef5-1db5a8571773'){
           sh 'mvn clean -DskipMunitTests deploy -DmuleDeploy -Danypoint.username="$DEPLOY_CREDS_USR" -Danypoint.password="$DEPLOY_CREDS_PSW" -Dcloudhub.environment="$ENVIRONMENT" -Dcloudhub.region="$REGION" -Dcloudhub.bg="$BG" -Dcloudhub.worker="$WORKER"'
         }
