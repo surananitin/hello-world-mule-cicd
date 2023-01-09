@@ -16,10 +16,12 @@ pipeline {
     }
     stage('Unit Test') {
       steps {
+      withMaven(maven: 'maven', mavenSettingsConfig: 'MyGlobalMVNSettings') {
       sh '''
           echo "JAVA_HOME= ${JAVA_HOME}"
           mvn clean test
       '''
+        }
       }
     }
     stage('Deploy CloudHub') {
