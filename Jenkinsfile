@@ -30,12 +30,12 @@ pipeline {
         muleEnv = "${env.cloudhub_env.toLowerCase()}"
       }
       steps {
-        echo "----Publishing to Artifactory------ "
-        withMaven(maven: 'maven', mavenSettingsConfig: 'c462e880-e0d1-4c31-bef5-1db5a8571773'){
-          sh 'mvn -e clean -DskipMunitTests deploy'
-        }
+        
+
         echo "----Running Build ${env.BUILD_ID} on muleEnv - ${muleEnv}----- "
-        sh 'mvn clean -DskipMunitTests deploy -DmuleDeploy'
+        withMaven(maven: 'maven', mavenSettingsConfig: 'c462e880-e0d1-4c31-bef5-1db5a8571773'){
+          sh 'mvn clean -DskipMunitTests deploy -DmuleDeploy'
+        }
       }
     }
   }
