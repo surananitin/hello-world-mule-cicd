@@ -26,7 +26,7 @@ pipeline {
     stage('Quality Check'){
       steps {
         withMaven(maven: 'maven', mavenSettingsConfig: 'c462e880-e0d1-4c31-bef5-1db5a8571773') {
-        sh 'mvn sonar:sonar -Dsonar.host.url=http://192.168.1.3:9000 -Dsonar.sources=src/'
+        sh 'mvn sonar:sonar -Dsonar.host.url=http://165.225.106.109:9000 -Dsonar.sources=src/'
         }
       }
     }
