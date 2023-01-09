@@ -42,7 +42,7 @@ pipeline {
       steps {
         echo "----Running Build ${env.BUILD_ID} on muleEnv - ${ENVIRONMENT}----- "
         withMaven(maven: 'maven', mavenSettingsConfig: 'c462e880-e0d1-4c31-bef5-1db5a8571773'){
-          sh 'mvn clean -DskipMunitTests deploy -DmuleDeploy -Danypoint.username="$DEPLOY_CREDS_USR" -Danypoint.password="$DEPLOY_CREDS_PSW" -Dcloudhub.environment="$ENVIRONMENT" -Dcloudhub.region="$REGION" -Dcloudhub.bg="$BG" -Dcloudhub.worker="$WORKER"'
+          sh 'mvn clean -DskipMunitTests deploy -DmuleDeploy'
         }
       }
     }

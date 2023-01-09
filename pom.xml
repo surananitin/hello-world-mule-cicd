@@ -34,7 +34,7 @@
 					<classifier>mule-application</classifier>
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
-                		<muleVersion>4.4.0</muleVersion>
+            <muleVersion>4.4.0</muleVersion>
 						<applicationName>hello-world-ns28540</applicationName>
 						<environment>Sandbox</environment>
 						<workers>1</workers>
@@ -43,9 +43,9 @@
 						<region>us-east-2</region>
 						<businessGroupId>NitinSurana-BG</businessGroupId>
 						<connectedAppClientId>b7cf0e14651047ccb3998491604cb075</connectedAppClientId>
-                		<connectedAppClientSecret>95635b6dE9534b6F81436539036F4b4C</connectedAppClientSecret>
-                		<connectedAppGrantType>client_credentials</connectedAppGrantType>
-                		<objectStoreV2>true</objectStoreV2>
+            <connectedAppClientSecret>95635b6dE9534b6F81436539036F4b4C</connectedAppClientSecret>
+            <connectedAppGrantType>client_credentials</connectedAppGrantType>
+            <objectStoreV2>true</objectStoreV2>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
