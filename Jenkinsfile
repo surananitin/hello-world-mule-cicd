@@ -10,7 +10,7 @@ pipeline {
     MULE_VERSION = '4.4.0'
     BG = "NitinSurana-BG"
     REGION="us-east-2"
-    WORKER = "Micro"
+    WORKER = "MICRO"
     // M2SETTINGS = "/Users/nsurana/.m2/settings.xml"
   }
   stages {
@@ -23,7 +23,7 @@ pipeline {
                 '''
        }
     }
-    
+
 
     stage('Unit Test') {
       steps {
