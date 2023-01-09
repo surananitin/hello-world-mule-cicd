@@ -36,11 +36,11 @@
 						<uri>https://anypoint.mulesoft.com</uri>
                 		<muleVersion>4.4.0</muleVersion>
 						<applicationName>hello-world-ns28540</applicationName>
-						<environment>${cloudhub.environment}</environment>
+						<environment>Sandbox</environment>
 						<workers>1</workers>
 						<workerType>${cloudhub.worker}</workerType>
 						<objectStoreV2>true</objectStoreV2>
-						<region>${cloudhub.region}</region>
+						<region>us-east-2</region>
 						<businessGroupId>${cloudhub.bg}</businessGroupId>
 						<connectedAppClientId>${anypoint.username}</connectedAppClientId>
                 		<connectedAppClientSecret>${anypoint.password}</connectedAppClientSecret>
