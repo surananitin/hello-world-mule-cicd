@@ -16,7 +16,7 @@ pipeline {
     }
     stage('Unit Test') {
       steps {
-      withMaven(maven: 'maven', mavenSettingsConfig: 'MyGlobalMVNSettings') {
+      withMaven(maven: 'maven', mavenSettingsConfig: 'c462e880-e0d1-4c31-bef5-1db5a8571773') {
       sh '''
           echo "JAVA_HOME= ${JAVA_HOME}"
           mvn clean test
