@@ -43,8 +43,8 @@
 						<region>us-east-2</region>
 						<businessGroupId>NitinSurana-BG</businessGroupId>
 						<connectedAppClientId>b7cf0e14651047ccb3998491604cb075</connectedAppClientId>
-            <connectedAppClientSecret>95635b6dE9534b6F81436539036F4b4C</connectedAppClientSecret>
-            <connectedAppGrantType>client_credentials</connectedAppGrantType>
+            			<connectedAppClientSecret>95635b6dE9534b6F81436539036F4b4C</connectedAppClientSecret>
+            			<connectedAppGrantType>client_credentials</connectedAppGrantType>
             <objectStoreV2>true</objectStoreV2>
 					</cloudHubDeployment>
 				</configuration>
@@ -88,20 +88,6 @@
 			<artifactId>mule-sockets-connector</artifactId>
 			<version>1.2.3</version>
 			<classifier>mule-plugin</classifier>
-		</dependency>
-		<dependency>
-			<groupId>com.mulesoft.munit</groupId>
-			<artifactId>munit-runner</artifactId>
-			<version>${munit.version}</version>
-			<classifier>mule-plugin</classifier>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.mulesoft.munit</groupId>
-			<artifactId>munit-tools</artifactId>
-			<version>${munit.version}</version>
-			<classifier>mule-plugin</classifier>
-			<scope>test</scope>
 		</dependency>
 	</dependencies>
 	<repositories>
