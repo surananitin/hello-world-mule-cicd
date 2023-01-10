@@ -108,7 +108,7 @@
 		<repository>
 		    <id>MuleRepository</id>
 		    <name>MuleSoft Nexus Repository</name>
-		    <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
+		    <url>https://repository.mulesoft.org/nexus/content/repositories/releases-ee/</url>
 		  </repository>
 		<repository>
 			<id>mulesoft-releases</id>
