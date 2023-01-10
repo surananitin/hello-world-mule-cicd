@@ -123,7 +123,7 @@
 	<pluginRepositories>
 	  <pluginRepository>
 	    <id>mule-public</id>
-	    <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
+	    <url>https://repository.mulesoft.org/nexus/content/repositories/releases-ee/</url>
 	  </pluginRepository>
 </pluginRepositories>
 </project>
