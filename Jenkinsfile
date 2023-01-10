@@ -37,12 +37,12 @@ pipeline {
     }
     stage('Deploy CloudHub Sandbox') {
       environment {
-        ENVIRONMENT = "${env.cloudhub_env}"
+        ENVIRONMENT = "sandbox"
       }
       steps {
         echo "----Running Build ${env.BUILD_ID} on muleEnv - ${ENVIRONMENT}----- "
         withMaven(maven: 'maven', mavenSettingsConfig: 'c462e880-e0d1-4c31-bef5-1db5a8571773'){
-          sh 'mvnDebug clean -DskipMunitTests deploy -DmuleDeploy'
+          sh 'mvn clean -DskipMunitTests deploy -DmuleDeploy'
         }
       }
     }
