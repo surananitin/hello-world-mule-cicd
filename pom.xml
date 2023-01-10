@@ -106,7 +106,7 @@
 	</dependencies>
 	<repositories>
 		<repository>
-		    <id>mule-public</id>
+		    <id>MuleRepository</id>
 		    <name>MuleSoft Nexus Repository</name>
 		    <url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
 		  </repository>
