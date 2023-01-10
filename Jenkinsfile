@@ -10,7 +10,8 @@ pipeline {
     MULE_VERSION = '4.4.0'
     BG = "NitinSurana-BG"
     REGION="us-east-2"
-    WORKER = "MICRO"
+    WORKER_TYPE = "MICRO"
+    WORKERS="1"
     // M2SETTINGS = "/Users/nsurana/.m2/settings.xml"
   }
   stages {
@@ -44,7 +45,8 @@ pipeline {
         withMaven(maven: 'maven', mavenSettingsConfig: 'c462e880-e0d1-4c31-bef5-1db5a8571773'){
         sh '''
             echo "JAVA_HOME= ${JAVA_HOME}"
-            mvn -X clean -DskipMunitTests deploy -DmuleDeploy
+            mvn clean -DskipMunitTests deploy -DmuleDeploy -Danypoint.clientId="$DEPLOY_CREDS_USR" -Danypoint.clientSecret="$DEPLOY_CREDS_PSW" -Dcloudhub.environment="$ENVIRONMENT" -Dcloudhub.region="$REGION" -Dcloudhub.bg="$BG" -Dcloudhub.workerType="$WORKER_TYPE" -Dcloudhub.workers="$WORKERS"
+
         '''
         }
       }
