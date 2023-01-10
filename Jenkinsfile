@@ -25,6 +25,17 @@ pipeline {
        }
     }
 
+    stage('Quality Check') {
+      steps {
+      withMaven(maven: 'maven', mavenSettingsConfig: 'c462e880-e0d1-4c31-bef5-1db5a8571773') {
+      sh '''
+          echo "JAVA_HOME= ${JAVA_HOME}"
+          pwd
+          mvn sonar:sonar -Dsonar.host.url=http://docker.for.mac.localhost:9000 -Dsonar.sources=src/
+      '''
+        }
+      }
+    }
 
     stage('Unit Test') {
       steps {
