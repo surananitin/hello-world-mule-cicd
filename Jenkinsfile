@@ -42,7 +42,10 @@ pipeline {
       steps {
         echo "----Running Build ${env.BUILD_ID} on muleEnv - ${ENVIRONMENT}----- "
         withMaven(maven: 'maven', mavenSettingsConfig: 'c462e880-e0d1-4c31-bef5-1db5a8571773'){
-          sh 'mvn clean -DskipMunitTests deploy -DmuleDeploy'
+        sh '''
+            echo "JAVA_HOME= ${JAVA_HOME}"
+            mvn clean -DskipMunitTests deploy -DmuleDeploy
+        '''
         }
       }
     }

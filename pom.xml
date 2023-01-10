@@ -12,7 +12,7 @@
 	<name>hello-world</name>
 
 	<properties>
-		<munit.version>2.3.14</munit.version>
+		<munit.version>2.3.13</munit.version>
 		<mule.maven.plugin.version>3.8.2</mule.maven.plugin.version>
 	</properties>
 
