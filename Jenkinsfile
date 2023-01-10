@@ -38,7 +38,7 @@ pipeline {
     }
     stage('Deploy CloudHub Sandbox') {
       environment {
-        ENVIRONMENT = "sandbox"
+        ENVIRONMENT = "Sandbox"
       }
       steps {
         echo "----Running Build ${env.BUILD_ID} on muleEnv - ${ENVIRONMENT}----- "
