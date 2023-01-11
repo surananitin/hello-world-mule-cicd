@@ -31,7 +31,7 @@ pipeline {
       sh '''
           echo "JAVA_HOME= ${JAVA_HOME}"
           pwd
-          mvn sonar:sonar -Dsonar.host.url=http://sonarqube:9000 -Dsonar.sources=src/
+          mvn sonar:sonar -Dsonar.host.url=http://sonarqube:9000 -Dsonar.login=admin -Dsonar.password=sonar -Dsonar.sources=src/
       '''
         }
       }
